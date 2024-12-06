@@ -164,7 +164,7 @@
       </NuxtLink>
       <NuxtLink
         @click="$emit('close')"
-        to="/"
+        to="/career"
         class="header-menu__link"
         v-if="menu"
       >

@@ -24,7 +24,7 @@
       </svg>
     </div>
   </div>
-  <NuxtLink to="/" class="header-menu__link">
+  <NuxtLink to="/career" class="header-menu__link">
     {{ menu.third_menu_item }}
   </NuxtLink>
   <NuxtLink to="/partners" class="header-menu__link" v-if="menu">
