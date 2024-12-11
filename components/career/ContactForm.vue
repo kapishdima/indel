@@ -94,8 +94,8 @@ const submit = async () => {
           `,
         attachments: [
           {
-            filename: formData.value.file.name,
             content: fileContent,
+            filename: formData.value.file.name,
             type: formData.value.file.type,
             disposition: "attachment",
           },
