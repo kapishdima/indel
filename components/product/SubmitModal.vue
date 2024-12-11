@@ -65,7 +65,7 @@ const submit = async () => {
         to: config.public.mailTo,
         subject: "Заявка с сайта",
         html: `
-            <h1>${formData.name} надіслав запит із сайту Indel на товар ${this.title}</h1>
+            <h1>${formData.name} надіслав запит із сайту Indel на товар ${props.title}</h1>
             <p><b>Тема</b>: "Заявка на товар"</p>
             <p><b>Email</b>: ${formData.email}</p>
             <p><b>Повідомлення</b>: ${formData.message}</p>
