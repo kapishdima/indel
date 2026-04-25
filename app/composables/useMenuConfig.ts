@@ -7,7 +7,8 @@ export const useMenuConfig = async () => {
     () =>
       find<any>("menyu", {
         locale: locale.value,
-      })
+      }),
+    { watch: [locale] }
   );
 
   const menu = computed(() => {

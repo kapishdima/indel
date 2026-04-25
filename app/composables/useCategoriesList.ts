@@ -20,7 +20,8 @@ export const useCategoriesList = async (
           ? { filters: { section: { $eq: options.section } } }
           : {}),
         locale: locale.value,
-      })
+      }),
+    { watch: [locale] }
   );
 
   const categories = computed(() =>
