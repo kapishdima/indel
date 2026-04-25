@@ -24,9 +24,9 @@ export default defineNuxtConfig({
   css: ["~/assets/scss/main.scss"],
 
   i18n: {
-    defaultLocale: "uk",
+    defaultLocale: "uk-UA",
     locales: [
-      { code: "uk", name: "Українська", language: "uk-UA", file: "uk.json" },
+      { code: "uk-UA", name: "Українська", language: "uk-UA", file: "uk.json" },
       { code: "en", name: "English", language: "en-US", file: "en.json" },
     ],
   },
