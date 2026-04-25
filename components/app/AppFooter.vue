@@ -75,7 +75,7 @@
           <NuxtLink to="/food" class="footer-col__item">
             Харчові інгредієнти
           </NuxtLink>
-          <NuxtLink to="#" class="footer-col__item"> Вакансії </NuxtLink>
+          <NuxtLink to="/career" class="footer-col__item"> Вакансії </NuxtLink>
           <SearchProducts classes="footer-search" />
         </div>
       </div>
