@@ -9,11 +9,15 @@
     </Head>
     <div class="container">
       <div class="col-12 col-lg-10 offset-lg-1">
-        <div class="post-page__image">
-          <img :src="post.image" :alt="post.title" />
+        <div class="row post-page__header">
+          <div class="col-12 col-lg-6 post-page__image">
+            <img :src="post.image" :alt="post.title" />
+          </div>
+          <div class="col-12 col-lg-6 post-page__info">
+            <div class="post-page__meta">{{ post.createdAt }}</div>
+            <h2 class="post-page__title">{{ post.title }}</h2>
+          </div>
         </div>
-        <div class="post-page__meta">{{ post.createdAt }}</div>
-        <h2 class="post-page__title">{{ post.title }}</h2>
         <div class="post-page__text" v-html="post.text"></div>
       </div>
     </div>
