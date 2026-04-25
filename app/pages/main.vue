@@ -1,7 +1,7 @@
 <template>
   <div class="home-page">
     <Head>
-      <Title>Indel</Title>
+      <Title>{{ $t("Indel") }}</Title>
       <Link rel="canonical" href="https://chempha.com" />
       <Meta
         name="google-site-verification"

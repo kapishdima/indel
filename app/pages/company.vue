@@ -1,13 +1,11 @@
 <template>
   <div class="company-page">
     <Head>
-      <Title>Indel About Company</Title>
-      <Meta name="og:title" content="Indel About Company" />
+      <Title>{{ $t("Про компанію Indel") }}</Title>
+      <Meta name="og:title" :content="$t('Про компанію Indel')" />
       <Meta
         name="og:description"
-        content="Indel OÜ is an international company engaged in distribution of
-            special and unique chemicals for production of personal care and
-            cosmetics."
+        :content="$t('Indel — міжнародна компанія, що займається дистрибуцією спеціальних та унікальних хімічних речовин для виробництва засобів особистої гігієни та косметики.')"
       />
       <Meta name="og:image" :content="companyInfo?.main_image" />
     </Head>

@@ -19,9 +19,17 @@ export default defineNuxtConfig({
   },
 
   devtools: { enabled: true },
-  modules: ["@nuxtjs/strapi", "@nuxt/image", "@nuxtjs/sitemap"],
+  modules: ["@nuxtjs/strapi", "@nuxt/image", "@nuxtjs/sitemap", "@nuxtjs/i18n"],
   plugins: ["~/plugins/click-outside.ts"],
   css: ["~/assets/scss/main.scss"],
+
+  i18n: {
+    defaultLocale: "uk",
+    locales: [
+      { code: "uk", name: "Українська", language: "uk-UA", file: "uk.json" },
+      { code: "en", name: "English", language: "en-US", file: "en.json" },
+    ],
+  },
 
   app: {
     head: {

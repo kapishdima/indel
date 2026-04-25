@@ -11,7 +11,7 @@
     </NuxtLink>
     <div class="product-card__actions">
       <AppButton variant="black" @click="openSubmitModal"
-        >Замовити взірець</AppButton
+        >{{ $t("Замовити взірець") }}</AppButton
       >
     </div>
   </div>

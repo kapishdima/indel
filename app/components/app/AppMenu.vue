@@ -1,10 +1,10 @@
 <template>
-  <NuxtLink to="/company" class="header-menu__link" v-if="menu">
+  <NuxtLink :to="$localePath('/company')" class="header-menu__link" v-if="menu">
     {{ menu.first_menu_item }}
   </NuxtLink>
   <div class="header-menu__link">
     <NuxtLink
-      to="/departments"
+      :to="$localePath('/departments')"
       class="header-menu__link-label"
       data-el="popover-trigger"
     >
@@ -24,16 +24,16 @@
       </svg>
     </div>
   </div>
-  <NuxtLink to="/career" class="header-menu__link" v-if="menu">
+  <NuxtLink :to="$localePath('/career')" class="header-menu__link" v-if="menu">
     {{ menu.third_menu_item }}
   </NuxtLink>
-  <NuxtLink to="/partners" class="header-menu__link" v-if="menu">
+  <NuxtLink :to="$localePath('/partners')" class="header-menu__link" v-if="menu">
     {{ menu.fourth_menu_item }}
   </NuxtLink>
-  <NuxtLink to="/news" class="header-menu__link" v-if="menu">
+  <NuxtLink :to="$localePath('/news')" class="header-menu__link" v-if="menu">
     {{ menu.fifth_menu_item }}
   </NuxtLink>
-  <NuxtLink to="/contact-us" class="header-menu__link" v-if="menu">
+  <NuxtLink :to="$localePath('/contact-us')" class="header-menu__link" v-if="menu">
     {{ menu.sixth_menu_item }}
   </NuxtLink>
 

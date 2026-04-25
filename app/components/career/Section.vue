@@ -13,7 +13,7 @@
       ></div>
 
       <div class="section-actions">
-        <NuxtLink to="/career" class="link-without-decoration">
+        <NuxtLink :to="$localePath('/career')" class="link-without-decoration">
           <AppButton variant="black" v-if="texts">{{
             texts.career_section_button_text
           }}</AppButton>

@@ -10,7 +10,7 @@
       <PostList :limit="2" :home="true" />
 
       <div class="section-actions">
-        <NuxtLink to="/posts" class="link-without-decoration">
+        <NuxtLink :to="$localePath('/posts')" class="link-without-decoration">
           <AppButton variant="black" v-if="texts">{{
             texts.fourth_section_button_text
           }}</AppButton>

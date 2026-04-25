@@ -1,11 +1,11 @@
 <template>
   <div class="news-page">
     <Head>
-      <Title>Indel News</Title>
-      <Meta name="og:title" content="Indel News" />
+      <Title>{{ $t("Новини Indel") }}</Title>
+      <Meta name="og:title" :content="$t('Новини Indel')" />
     </Head>
     <div class="container">
-      <AppPageBanner title="Новини" />
+      <AppPageBanner :title="$t('Новини')" />
       <div class="posts-list-container">
         <PostList />
       </div>

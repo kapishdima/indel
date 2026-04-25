@@ -1,8 +1,8 @@
 <template>
-  <AppModal id="submit-modal" title="Замовити взірець">
+  <AppModal id="submit-modal" :title="$t('Замовити взірець')">
     <form class="submit-modal__form" @submit.prevent="submit">
       <label class="form-field">
-        Ім'я
+        {{ $t("Ім'я") }}
         <input
           type="text"
           class="form-field__input"
@@ -11,7 +11,7 @@
         />
       </label>
       <label class="form-field">
-        Email
+        {{ $t("Email") }}
         <input
           type="email"
           class="form-field__input"
@@ -20,7 +20,7 @@
         />
       </label>
       <label class="form-field">
-        Тема
+        {{ $t("Тема") }}
         <input
           type="text"
           class="form-field__input"
@@ -28,7 +28,7 @@
         />
       </label>
       <label class="form-field">
-        Повідомлення
+        {{ $t("Повідомлення") }}
         <textarea
           class="form-field__textarea"
           required
@@ -37,7 +37,7 @@
       </label>
       <div class="submit-modal__actions">
         <AppButton variant="black" appearence="filled"
-          >Замовити взірець</AppButton
+          >{{ $t("Замовити взірець") }}</AppButton
         >
       </div>
     </form>

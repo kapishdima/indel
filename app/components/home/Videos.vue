@@ -10,7 +10,7 @@
       <VideoList />
 
       <div class="section-actions">
-        <NuxtLink to="/videos" class="link-without-decoration">
+        <NuxtLink :to="$localePath('/videos')" class="link-without-decoration">
           <AppButton variant="black" v-if="texts">{{
             texts.fifth_section_button_text
           }}</AppButton>

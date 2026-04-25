@@ -18,7 +18,7 @@
         />
       </svg>
 
-      <h2 class="error-modal__title">Something went wrong</h2>
+      <h2 class="error-modal__title">{{ $t("Щось пішло не так") }}</h2>
     </div>
   </AppModal>
 </template>

@@ -1,12 +1,12 @@
 <template>
   <div class="col-12 col-lg-6">
-    <h4 class="contact-title">Зв'яжіться з нами</h4>
-    <h5 class="contact-subtitle">Ми з нетерпінням чекаємо від вас!</h5>
+    <h4 class="contact-title">{{ $t("Зв'яжіться з нами") }}</h4>
+    <h5 class="contact-subtitle">{{ $t("Ми з нетерпінням чекаємо від вас!") }}</h5>
 
     <form class="contact-form" @submit.prevent="submit">
       <div class="contact-form__row">
         <label for="name" class="form-field col-12">
-          Ім'я*
+          {{ $t("Ім'я") }}*
           <input
             class="form-field__input"
             type="text"
@@ -16,7 +16,7 @@
           />
         </label>
         <label for="email" class="form-field col-12">
-          Email*
+          {{ $t("Email") }}*
           <input
             class="form-field__input"
             type="email"
@@ -28,7 +28,7 @@
       </div>
 
       <label for="message" class="form-field">
-        Ваше повідомлення
+        {{ $t("Ваше повідомлення") }}
         <textarea
           id="message"
           v-model="formData.message"
@@ -36,7 +36,7 @@
         />
       </label>
       <label for="file" class="form-field col-12">
-        Резюме
+        {{ $t("Резюме") }}
         <input
           class="form-field__upload"
           type="file"
@@ -46,7 +46,7 @@
         />
       </label>
       <div class="contact-form__actions">
-        <AppButton variant="black">Відправити повідомлення</AppButton>
+        <AppButton variant="black">{{ $t("Відправити повідомлення") }}</AppButton>
       </div>
     </form>
   </div>

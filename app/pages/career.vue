@@ -1,12 +1,12 @@
 <template>
   <div class="career-page">
     <Head>
-      <Title>Indel career</Title>
-      <Meta name="og:title" content="Indel career" />
+      <Title>{{ $t("Кар'єра в Indel") }}</Title>
+      <Meta name="og:title" :content="$t(`Кар'єра в Indel`)" />
     </Head>
     <div class="container" v-if="careerInfo">
       <AppPageBanner
-        :title="careerInfo.banner_text || 'Кар\'ера'"
+        :title="careerInfo.banner_text || $t(`Кар'єра`)"
         :img="careerInfo.banner_img"
       />
 
@@ -21,10 +21,10 @@
           </h3>
           <p class="career__text" v-html="careerInfo.section_text"></p>
           <a :href="careerInfo.workua_link" class="career__link"
-            >Вакансії на Work.ua
+            >{{ $t("Вакансії на Work.ua") }}
           </a>
           <a :href="careerInfo.rabotaua_link" class="career__link"
-            >Вакансії на Rabota.ua
+            >{{ $t("Вакансії на Rabota.ua") }}
           </a>
         </div>
       </div>
@@ -34,14 +34,14 @@
         <div class="col-12 col-lg-6 contact-map">
           <div class="contact-map-label">
             <p class="contact-address">
-              <b>ТОВ "Індел"</b> <br />
-              Вул. М. Грушевського, 39Д <br />
-              Одеса, 65031, Україна<br />
+              <b>{{ $t(`ТОВ "Індел"`) }}</b> <br />
+              {{ $t("Вул. М. Грушевського, 39Д") }} <br />
+              {{ $t("Одеса, 65031, Україна") }}<br />
               <a href="tel:+380 48 701-33-89">Tel: +380 48 701-33-89</a>
               <a href="tel:+380 48 705-46-61">Tel: +380 48 705-46-61</a>
             </p>
             <p class="contact-email">
-              <span class="contact-email__label">EMAIL</span><br />
+              <span class="contact-email__label">{{ $t("EMAIL") }}</span><br />
               <a href="mailto:info@indel.com.ua" class="contact-email__value"
                 >info@indel.com.ua</a
               >

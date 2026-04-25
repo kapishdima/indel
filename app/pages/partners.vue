@@ -1,14 +1,14 @@
 <template>
   <div class="partners-page">
     <Head>
-      <Title>Partners</Title>
-      <Meta name="og:title" content="Indel Partners" />
+      <Title>{{ $t("Партнери Indel") }}</Title>
+      <Meta name="og:title" :content="$t('Партнери Indel')" />
     </Head>
     <div class="container">
-      <AppPageBanner img="/images/banners/partner.jpg" title="Партнери" />
+      <AppPageBanner img="/images/banners/partner.jpg" :title="$t('Партнери')" />
 
       <div class="section-header">
-        <h2 class="section-title">Наші партнери</h2>
+        <h2 class="section-title">{{ $t("Наші партнери") }}</h2>
       </div>
       <div class="row partners-list gy-5">
         <a

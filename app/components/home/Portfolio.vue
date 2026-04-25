@@ -11,19 +11,19 @@
 
     <div class="row g-2 portfolio-list">
       <div class="col-lg-6 portfolio-card">
-        <NuxtLink to="/ingredients">
+        <NuxtLink :to="$localePath('/ingredients')">
           <div class="portfolio-card__image-wrapper">
             <img
               src="/images/banners/portfolio/portfolio-1.jpg"
-              alt="Ingredients"
+              :alt="$t('Інгредієнти')"
               class="portfolio-card__image"
             />
           </div>
 
           <div class="portfolio-card__content">
-            <h3 class="portfolio-card__title">Інгредієнти</h3>
+            <h3 class="portfolio-card__title">{{ $t("Інгредієнти") }}</h3>
             <h4 class="portfolio-card__subtitle">
-              Категорії
+              {{ $t("Категорії") }}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 id="Outline"
@@ -40,18 +40,18 @@
         </NuxtLink>
       </div>
       <div class="col-lg-6 portfolio-card">
-        <NuxtLink to="/applications">
+        <NuxtLink :to="$localePath('/applications')">
           <div class="portfolio-card__image-wrapper">
             <img
               src="/images/banners/portfolio/portfolio-2.jpg"
-              alt="Application"
+              :alt="$t('Використання')"
               class="portfolio-card__image"
             />
           </div>
           <div class="portfolio-card__content">
-            <h3 class="portfolio-card__title">Використання</h3>
+            <h3 class="portfolio-card__title">{{ $t("Використання") }}</h3>
             <h4 class="portfolio-card__subtitle">
-              Категорії
+              {{ $t("Категорії") }}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 id="Outline"

@@ -1,21 +1,21 @@
 <template>
   <div class="category-page" v-if="info">
     <Head>
-      <Title>Інгредієнти</Title>
-      <Meta name="og:title" :content="`Інгредієнти`" />
+      <Title>{{ $t("Інгредієнти") }}</Title>
+      <Meta name="og:title" :content="$t('Інгредієнти')" />
       <Meta name="og:image" :content="info.images.banner" />
     </Head>
     <div class="container">
-      <AppPageBanner title="Інгредієнти" :img="info.images.banner" />
+      <AppPageBanner :title="$t('Інгредієнти')" :img="info.images.banner" />
 
       <div class="row categories-list gy-5">
         <div class="col-12 col-lg-4">
-          <NuxtLink class="category-card__link" to="/pharm">
+          <NuxtLink class="category-card__link" :to="$localePath('/pharm')">
             <CategoryCard :name="info.pharmTitle" :image="info.images.pharm" />
           </NuxtLink>
         </div>
         <div class="col-12 col-lg-4">
-          <NuxtLink class="category-card__link" to="/food">
+          <NuxtLink class="category-card__link" :to="$localePath('/food')">
             <CategoryCard :name="info.foodTitle" :image="info.images.food" />
           </NuxtLink>
         </div>

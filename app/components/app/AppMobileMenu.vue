@@ -1,7 +1,7 @@
 <template>
   <div class="header-mobile d-block d-lg-none" :class="{ active: opened }">
     <div class="header-mobile__header">
-      <NuxtLink @click="emit('close')" to="/">
+      <NuxtLink @click="emit('close')" :to="$localePath('/')">
         <img src="/images/logo.png" alt="" class="header-logo" />
       </NuxtLink>
       <div
@@ -17,10 +17,14 @@
       <SearchProducts @search="emit('close')" />
     </div>
 
+    <div class="header-mobile__locale">
+      <AppLocale />
+    </div>
+
     <div class="header-mobile__menu">
       <NuxtLink
         @click="emit('close')"
-        to="/company"
+        :to="$localePath('/company')"
         class="header-menu__link"
         v-if="menu"
       >
@@ -29,7 +33,7 @@
 
       <div class="header-menu__link" v-if="menu">
         <div class="header-menu__link-label" @click="toggleCategory('food')">
-          Харчові інгредієнти
+          {{ $t("Харчові інгредієнти") }}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             id="Outline"
@@ -72,7 +76,7 @@
 
             <NuxtLink
               v-else
-              :to="`/category/${category.id}`"
+              :to="$localePath(`/category/${category.id}`)"
               @click="emit('close')"
             >
               {{ category.name }}
@@ -85,7 +89,7 @@
             >
               <NuxtLink
                 v-for="subcategory of category.children"
-                :to="`/subcategory/${subcategory.id}`"
+                :to="$localePath(`/subcategory/${subcategory.id}`)"
                 class="header-menu__link"
                 @click="emit('close')"
                 :key="subcategory.id"
@@ -98,7 +102,7 @@
       </div>
       <div class="header-menu__link" v-if="menu">
         <div class="header-menu__link-label" @click="toggleCategory('pharm')">
-          Фармацевтичні інгредієнти
+          {{ $t("Фармацевтичні інгредієнти") }}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             id="Outline"
@@ -141,7 +145,7 @@
 
             <NuxtLink
               v-else
-              :to="`/category/${category.id}`"
+              :to="$localePath(`/category/${category.id}`)"
               @click="emit('close')"
             >
               {{ category.name }}
@@ -154,7 +158,7 @@
             >
               <NuxtLink
                 v-for="subcategory of category.children"
-                :to="`/subcategory/${subcategory.id}`"
+                :to="$localePath(`/subcategory/${subcategory.id}`)"
                 class="header-menu__link"
                 @click="emit('close')"
                 :key="subcategory.id"
@@ -170,11 +174,11 @@
         class="header-menu__link"
         v-if="menu"
       >
-        Косметичні інгредієнти
+        {{ $t("Косметичні інгредієнти") }}
       </NuxtLink>
       <NuxtLink
         @click="emit('close')"
-        to="/career"
+        :to="$localePath('/career')"
         class="header-menu__link"
         v-if="menu"
       >
@@ -182,7 +186,7 @@
       </NuxtLink>
       <NuxtLink
         @click="emit('close')"
-        to="/partners"
+        :to="$localePath('/partners')"
         class="header-menu__link"
         v-if="menu"
       >
@@ -190,7 +194,7 @@
       </NuxtLink>
       <NuxtLink
         @click="emit('close')"
-        to="/news"
+        :to="$localePath('/news')"
         class="header-menu__link"
         v-if="menu"
       >
@@ -198,7 +202,7 @@
       </NuxtLink>
       <NuxtLink
         @click="emit('close')"
-        to="/contact-us"
+        :to="$localePath('/contact-us')"
         class="header-menu__link"
         v-if="menu"
       >
@@ -211,6 +215,7 @@
 <script setup>
 defineProps(["opened"]);
 const emit = defineEmits(["close"]);
+
 
 const nameCategoryOpened = ref(null);
 const nameSubCategoryOpened = ref(null);

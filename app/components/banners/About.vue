@@ -11,7 +11,7 @@
           v-html="texts.first_section_subtitle"
         ></div>
         <div class="about-banner__actions">
-          <NuxtLink to="/company" class="link-without-decoration">
+          <NuxtLink :to="$localePath('/company')" class="link-without-decoration">
             <AppButton variant="black" v-if="texts">{{
               texts.first_section_button_text
             }}</AppButton>

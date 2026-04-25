@@ -1,26 +1,26 @@
 <template>
     <div class="contact-page">
         <Head>
-            <Title>Indel Contact Us</Title>
-            <Meta name="og:title" content="Indel Contact Us" />
+            <Title>{{ $t("Зв'язок з Indel") }}</Title>
+            <Meta name="og:title" :content="$t(`Зв'язок з Indel`)" />
         </Head>
         <div class="container">
             <AppPageBanner
-                title="Зв'яжіться з нами"
-                subtitle="Якщо у вас виникли запитання або ви хочете дізнатися більше про наші інгредієнти, будь ласка, не соромтеся зв’язатися з нами."
+                :title="$t(`Зв'яжіться з нами`)"
+                :subtitle="$t(`Якщо у вас виникли запитання або ви хочете дізнатися більше про наші інгредієнти, будь ласка, не соромтеся зв'язатися з нами.`)"
             />
 
             <div class="contact-content row gy-4">
                 <div class="col-12 col-lg-6">
-                    <h4 class="contact-title">Зв'яжіться з нами</h4>
+                    <h4 class="contact-title">{{ $t("Зв'яжіться з нами") }}</h4>
                     <h5 class="contact-subtitle">
-                        Ми з нетерпінням чекаємо від вас!
+                        {{ $t("Ми з нетерпінням чекаємо від вас!") }}
                     </h5>
 
                     <form class="contact-form" @submit.prevent="submit">
                         <div class="contact-form__row">
                             <label for="name" class="form-field col-12">
-                                Ім'я*
+                                {{ $t("Ім'я") }}*
                                 <input
                                     class="form-field__input"
                                     type="text"
@@ -30,7 +30,7 @@
                                 />
                             </label>
                             <label for="email" class="form-field col-12">
-                                Email*
+                                {{ $t("Email") }}*
                                 <input
                                     class="form-field__input"
                                     type="email"
@@ -41,7 +41,7 @@
                             </label>
                         </div>
                         <label for="message" class="form-field">
-                            Ваше повідомлення
+                            {{ $t("Ваше повідомлення") }}
                             <textarea
                                 id="message"
                                 v-model="formData.message"
@@ -50,7 +50,7 @@
                         </label>
                         <div class="contact-form__actions">
                             <AppButton variant="black"
-                                >Відправити повідомлення</AppButton
+                                >{{ $t("Відправити повідомлення") }}</AppButton
                             >
                         </div>
                     </form>
@@ -58,9 +58,9 @@
                 <div class="col-12 col-lg-6 contact-map">
                     <div class="contact-map-label">
                         <p class="contact-address">
-                            <b>ТОВ "Індел"</b> <br />
-                            Вул. М. Грушевського, 39Д <br />
-                            Одеса, 65031, Україна<br />
+                            <b>{{ $t(`ТОВ "Індел"`) }}</b> <br />
+                            {{ $t("Вул. М. Грушевського, 39Д") }} <br />
+                            {{ $t("Одеса, 65031, Україна") }}<br />
                             <a href="tel:+380 48 701-33-89"
                                 >Tel: +380 48 701-33-89</a
                             >
@@ -69,7 +69,7 @@
                             >
                         </p>
                         <p class="contact-email">
-                            <span class="contact-email__label">EMAIL</span
+                            <span class="contact-email__label">{{ $t("EMAIL") }}</span
                             ><br />
                             <a
                                 href="mailto:info@indel.com.ua"

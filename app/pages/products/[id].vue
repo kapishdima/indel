@@ -22,7 +22,7 @@
               appearence="filled"
               @click="openSubmitModal"
             >
-              Замовити взірець
+              {{ $t("Замовити взірець") }}
             </AppButton>
           </div>
         </div>
@@ -30,7 +30,7 @@
 
       <div class="product-page__content">
         <div class="product-page__tabs">
-          <div class="product-page__tab">Опис</div>
+          <div class="product-page__tab">{{ $t("Опис") }}</div>
         </div>
         <div class="product-page__text" v-html="product.description" />
         <div

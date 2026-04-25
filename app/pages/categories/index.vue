@@ -1,13 +1,13 @@
 <template>
   <div class="category-page">
     <Head>
-      <Title>{{ sections[section] }}</Title>
-      <Meta name="og:title" :content="sections[section]" />
+      <Title>{{ $t(sections[section]) }}</Title>
+      <Meta name="og:title" :content="$t(sections[section])" />
       <Meta name="og:image" content="/images/banners/ingredients.jpeg" />
     </Head>
     <div class="container">
       <AppPageBanner
-        :title="sections[section]"
+        :title="$t(sections[section])"
         img="/images/banners/ingredients.jpeg"
       />
 
@@ -19,11 +19,11 @@
         >
           <NuxtLink
             class="category-card__link"
-            :to="
+            :to="$localePath(
               category.children && category.children.length
                 ? `/${section}/${category.id}`
                 : `/category/${category.id}`
-            "
+            )"
           >
             <CategoryCard :name="category.name" :image="category.image" />
           </NuxtLink>

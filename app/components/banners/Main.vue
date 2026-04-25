@@ -20,7 +20,7 @@
           {{ slide.description }}
         </h3>
         <div class="main-banner__actions">
-          <NuxtLink :to="slide.link" class="link-without-decoration">
+          <NuxtLink :to="$localePath(slide.link)" class="link-without-decoration">
             <AppButton variant="white">{{ slide.button_text }}</AppButton>
           </NuxtLink>
         </div>

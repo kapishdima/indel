@@ -1,12 +1,12 @@
 <template>
   <div class="search-page">
     <div class="container">
-      <AppPageBanner title="Search result" />
+      <AppPageBanner :title="$t('Результати пошуку')" />
       <div class="search-container--full">
         <input
           type="text"
           class="search-container__input"
-          placeholder="Результати пошуку..."
+          :placeholder="$t('Результати пошуку...')"
           v-model="query"
           @keyup.enter="onSearch"
         />
@@ -45,7 +45,7 @@
         </div>
 
         <div class="col-lg-4 col-xl-3 gy-5" v-for="post of posts" :key="post.id">
-          <NuxtLink :to="`/posts/${post.id}`" class="link-without-decoration">
+          <NuxtLink :to="$localePath(`/posts/${post.id}`)" class="link-without-decoration">
             <PostCard
               :title="post.title"
               :category="post.category"
@@ -57,7 +57,7 @@
       </div>
 
       <div class="search-empty" v-else-if="!loading">
-        <h1 class="search-empty__title">No search results</h1>
+        <h1 class="search-empty__title">{{ $t("Немає результатів пошуку") }}</h1>
       </div>
     </div>
   </div>

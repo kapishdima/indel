@@ -3,7 +3,7 @@
     <input
       type="text"
       class="search-container__input"
-      placeholder="Пошук..."
+      :placeholder="$t('Пошук...')"
       :class="{ opened }"
       ref="searchInput"
       v-model="query"

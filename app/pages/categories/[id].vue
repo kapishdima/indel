@@ -15,7 +15,7 @@
           :key="subcategory.id"
         >
           <NuxtLink
-            :to="`/subcategory/${subcategory.id}`"
+            :to="$localePath(`/subcategory/${subcategory.id}`)"
             class="category-card__link"
           >
             <CategoryCard :name="subcategory.name" :image="subcategory.image" />

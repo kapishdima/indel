@@ -17,7 +17,7 @@
         <div class="mega-menu__column">
           <div class="mega-menu-sections__list">
             <div class="mega-menu__section-item">
-              <NuxtLink to="/pharm"> Фармацевтичні </NuxtLink>
+              <NuxtLink :to="$localePath('/pharm')"> {{ $t("Фармацевтичні") }} </NuxtLink>
 
               <div
                 class="mega-menu-categories__button"
@@ -40,7 +40,7 @@
               </div>
             </div>
             <div class="mega-menu__section-item">
-              <NuxtLink to="/food"> Харчові </NuxtLink>
+              <NuxtLink :to="$localePath('/food')"> {{ $t("Харчові") }} </NuxtLink>
               <div
                 class="mega-menu-categories__button"
                 @click.stop="selectSection('food')"
@@ -66,7 +66,7 @@
               class="mega-menu__section-item"
               target="_blank"
             >
-              Косметичні
+              {{ $t("Косметичні") }}
             </a>
           </div>
         </div>
@@ -77,7 +77,7 @@
               v-for="category of currentSection"
               :key="category.id"
             >
-              <NuxtLink :to="`/${category.section}/${category.id}`">
+              <NuxtLink :to="$localePath(`/${category.section}/${category.id}`)">
                 {{ category.name }}
               </NuxtLink>
 
@@ -109,7 +109,7 @@
             <NuxtLink
               class="mega-menu-categories__item"
               v-for="subcategory of currentCategory.children"
-              :to="`/subcategory/${subcategory.id}`"
+              :to="$localePath(`/subcategory/${subcategory.id}`)"
               :key="subcategory.id"
             >
               {{ subcategory.name }}
@@ -124,6 +124,7 @@
 <script setup>
 const props = defineProps(["shown"]);
 const emit = defineEmits(["close"]);
+
 
 const megaMenu = ref(null);
 const currentSection = ref(null);

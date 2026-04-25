@@ -2,11 +2,11 @@
   <footer class="footer container">
     <div class="row gy-5">
       <div class="col-lg-4">
-        <h4 class="footer-col__title">Адреса</h4>
+        <h4 class="footer-col__title">{{ $t("Адреса") }}</h4>
         <div class="footer-col__list">
-          <div class="footer-col__item">ТОВ "Індел"</div>
-          <div class="footer-col__item">Вул. М. Грушевського, 39Д</div>
-          <div class="footer-col__item">Одеса, 65031, Україна</div>
+          <div class="footer-col__item">{{ $t("ТОВ \"Індел\"") }}</div>
+          <div class="footer-col__item">{{ $t("Вул. М. Грушевського, 39Д") }}</div>
+          <div class="footer-col__item">{{ $t("Одеса, 65031, Україна") }}</div>
 
           <div class="footer-socials">
             <NuxtLink
@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="col-lg-4">
-        <h4 class="footer-col__title">Контакти</h4>
+        <h4 class="footer-col__title">{{ $t("Контакти") }}</h4>
         <div class="footer-col__list">
           <a href="tel:+380 48 701-33-89" class="footer-col__item"
             >Tel: +380 48 701-33-89</a
@@ -66,22 +66,27 @@
             target="_blank"
             class="footer-col__item"
           >
-            Косметичні інгредієнти
+            {{ $t("Косметичні інгредієнти") }}
           </NuxtLink>
-          <NuxtLink to="/pharm" class="footer-col__item">
-            Фармацевтичні інгредієнти
+          <NuxtLink :to="$localePath('/pharm')" class="footer-col__item">
+            {{ $t("Фармацевтичні інгредієнти") }}
           </NuxtLink>
-          <NuxtLink to="/food" class="footer-col__item">
-            Харчові інгредієнти
+          <NuxtLink :to="$localePath('/food')" class="footer-col__item">
+            {{ $t("Харчові інгредієнти") }}
           </NuxtLink>
-          <NuxtLink to="/career" class="footer-col__item"> Вакансії </NuxtLink>
+          <NuxtLink :to="$localePath('/career')" class="footer-col__item">
+            {{ $t("Вакансії") }}
+          </NuxtLink>
           <SearchProducts classes="footer-search" />
         </div>
       </div>
     </div>
 
     <div class="footer-copyright">
-      Indel © Copyright 2025 - Усі права захищено
+      {{ $t("Indel © Copyright 2025 - Усі права захищено") }}
     </div>
   </footer>
 </template>
+
+<script setup>
+</script>
