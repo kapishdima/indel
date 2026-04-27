@@ -10,7 +10,7 @@ export const useProductBySlug = async (
   const idRef = isRef(documentId) ? documentId : ref(documentId);
 
   const { data: response } = await useAsyncData(
-    `product-${idRef.value}`,
+    `product-${idRef.value}-${locale.value}`,
     () =>
       findOne<any>("tovaries", idRef.value, {
         populate: { image: true, pod_kategoriyas: true },
