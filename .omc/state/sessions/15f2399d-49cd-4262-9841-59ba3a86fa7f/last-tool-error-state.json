@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"NUXT_PUBLIC_SITE_URL=https://example.com PORT=3999 node .output/server/index.mjs > /tmp/claude-501/-Users-dev-wandry-projects-personal-indel-indel/15f2399d-49cd-4262-9841-59ba3a86fa7f/scra...",
+  "error": "Exit code 7\n=== /robots.txt ===\n\n[HTTP 000]\n=== /sitemap.xml ===\n[HTTP 000]\n=== /sitemap_index.xml ===\n[HTTP 000]",
+  "timestamp": "2026-08-10T11:18:43.280Z",
+  "retry_count": 1
+}

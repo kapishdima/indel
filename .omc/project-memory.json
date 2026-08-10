@@ -1,0 +1,155 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1786359877257,
+  "projectRoot": "/Users/dev_wandry/projects/personal/indel/indel",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": ">=18.0.0 <=22.x.x",
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "nuxt",
+        "version": "4.4.2",
+        "category": "fullstack"
+      }
+    ],
+    "packageManager": "pnpm",
+    "runtime": "Node.js 18.0.022.x.x"
+  },
+  "build": {
+    "buildCommand": "SP=/tmp/claude-501/-Users-dev-wandry-projects-personal-indel-indel/15f2399d-49cd-4262-9841-59ba3a86fa7f/scratchpad\nrm -rf .output\nNUXT_PUBLIC_SITE_URL=https://example.com STRAPI_URL=http://localhost:4557 pnpm build 2>&1 | tail -4\necho \"=== uk-UA urls ===\"; grep -c \"<loc>\" .output/public/__sitemap__/uk-UA.xml\necho \"=== en-US urls ===\"; grep -c \"<loc>\" .output/public/__sitemap__/en-US.xml\necho \"=== sample product entry (uk) ===\"; grep -A5 \"<loc>https://example.com/products/doc1</loc>\" .output/public/__sitemap__/uk-UA.xml | head -7\necho \"=== sample product entry (en) ===\"; grep -A5 \"<loc>https://example.com/en/products/doc1</loc>\" .output/public/__sitemap__/en-US.xml | head -7",
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": "pnpm dev",
+    "scripts": {
+      "build": "nuxt build",
+      "dev": "nuxt dev",
+      "generate": "nuxt generate",
+      "preview": "nuxt preview",
+      "postinstall": "nuxt prepare",
+      "typecheck": "nuxt typecheck"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "app",
+      "public"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "app": {
+      "path": "app",
+      "purpose": "Application code",
+      "fileCount": 1,
+      "lastAccessed": 1786359877220,
+      "keyFiles": [
+        "app.vue"
+      ]
+    },
+    "i18n": {
+      "path": "i18n",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1786359877243,
+      "keyFiles": []
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 3,
+      "lastAccessed": 1786359877243,
+      "keyFiles": [
+        "favicon.ico",
+        "googleda11475467dbee43.html"
+      ]
+    },
+    "server": {
+      "path": "server",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1786359877243,
+      "keyFiles": []
+    },
+    "app/assets": {
+      "path": "app/assets",
+      "purpose": "Static assets",
+      "fileCount": 1,
+      "lastAccessed": 1786359877244,
+      "keyFiles": []
+    },
+    "app/components": {
+      "path": "app/components",
+      "purpose": "UI components",
+      "fileCount": 0,
+      "lastAccessed": 1786359877244,
+      "keyFiles": []
+    },
+    "app/pages": {
+      "path": "app/pages",
+      "purpose": "Page components",
+      "fileCount": 7,
+      "lastAccessed": 1786359877245,
+      "keyFiles": [
+        "career.vue",
+        "company.vue",
+        "contact-us.vue"
+      ]
+    },
+    "server/api": {
+      "path": "server/api",
+      "purpose": "API routes",
+      "fileCount": 2,
+      "lastAccessed": 1786359877246,
+      "keyFiles": [
+        "_sitemap-urls.ts",
+        "mail.post.ts"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "server/api/_sitemap-urls.ts",
+      "accessCount": 5,
+      "lastAccessed": 1786360963134,
+      "type": "file"
+    },
+    {
+      "path": "nuxt.config.js",
+      "accessCount": 2,
+      "lastAccessed": 1786360623872,
+      "type": "file"
+    },
+    {
+      "path": ".env.example",
+      "accessCount": 2,
+      "lastAccessed": 1786360648543,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

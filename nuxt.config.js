@@ -19,7 +19,18 @@ export default defineNuxtConfig({
   },
 
   devtools: { enabled: true },
-  modules: ["@nuxtjs/strapi", "@nuxt/image", "@nuxtjs/sitemap", "@nuxtjs/i18n"],
+  modules: [
+    "@nuxtjs/strapi",
+    "@nuxt/image",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/robots",
+    "@nuxtjs/i18n",
+  ],
+
+  sitemap: {
+    sources: ["/api/_sitemap-urls"],
+    exclude: ["/search"],
+  },
   plugins: ["~/plugins/click-outside.ts"],
   css: ["~/assets/scss/main.scss"],
 
