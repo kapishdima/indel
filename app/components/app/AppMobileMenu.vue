@@ -17,10 +17,6 @@
       <SearchProducts @search="emit('close')" />
     </div>
 
-    <div class="header-mobile__locale">
-      <AppLocale />
-    </div>
-
     <div class="header-mobile__menu">
       <NuxtLink
         @click="emit('close')"

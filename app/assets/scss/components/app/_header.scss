@@ -158,6 +158,20 @@
 
 // Categories End
 
+.header-mobile__actions {
+  column-gap: 20px;
+
+  .header-locales {
+    padding-left: 0;
+    column-gap: 0;
+
+    &__item {
+      display: flex;
+      padding: 12px 8px;
+    }
+  }
+}
+
 .header-mobile__btn {
   width: 26px;
 
@@ -167,6 +181,18 @@
   align-items: center;
   flex-direction: column;
   row-gap: 4px;
+
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  // 26px button, 44px effective tap target
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -12px;
+  }
 
   .line {
     width: 100%;
@@ -192,6 +218,7 @@
 .header-mobile {
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 2;
 
   width: 100vw;
@@ -201,7 +228,7 @@
   background-color: #fff;
   overflow-y: auto;
 
-  transform: translateX(-100%);
+  transform: translateX(100%);
   will-change: transform;
   transition: transform 0.5s ease-in-out;
 
